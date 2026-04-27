@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-tint": "#565e74",
+                    "on-surface": "#191c1e",
+                    "secondary-fixed-dim": "#ffb95f",
+                    "tertiary": "#000000",
+                    "secondary-fixed": "#ffddb8",
+                    "outline-variant": "#c6c6cd",
+                    "outline": "#76777d",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-container": "#131b2e",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary-fixed": "#131b2e",
+                    "primary": "#000000",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "secondary-container": "#fea619",
+                    "primary-fixed": "#dae2fd",
+                    "surface": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#7c839b",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary-container": "#0b1c30",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "on-tertiary-container": "#75859d",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#684000",
+                    "tertiary-fixed": "#d3e4fe",
+                    "background": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "secondary": "#855300",
+                    "inverse-primary": "#bec6e0",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-background": "#191c1e",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-fixed": "#2a1700",
+                    "surface-container-low": "#f2f4f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "40px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "unit": "4px",
+                    "container-max": "1280px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Manrope"],
+                    "title-sm": ["Manrope"],
+                    "body-bold": ["Inter"],
+                    "caption": ["Inter"],
+                    "body-main": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-bold": ["16px", {"lineHeight": "1.6", "fontWeight": "600"}],
+                    "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .mark-distinction-card {
+            border-top: 2px solid #855300;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-main selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md text-slate-900 dark:text-slate-50 font-['Manrope'] font-semibold tracking-tight docked full-width top-0 z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm sticky top-0 flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="architecture">architecture</span>
+<span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-slate-50 uppercase">SANAMARK</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-orange-500 dark:text-orange-400 font-bold border-b-2 border-orange-500 transition-all duration-300 ease-in-out" href="#">الرئيسية</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors transition-all duration-300 ease-in-out" href="#">عن سنمارك</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors transition-all duration-300 ease-in-out" href="#">خدماتنا</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors transition-all duration-300 ease-in-out" href="#">أعمالنا</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors transition-all duration-300 ease-in-out" href="#">اتصل بنا</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body-bold hover:opacity-90 transition-all">Request Quote</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[751px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img alt="Construction site" class="w-full h-full object-cover opacity-40 grayscale" data-alt="Modern architectural construction site at dusk with glowing lights, steel structures, and a premium professional atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJItcn9dS1kddY1x-eHIlrPoxOKVQQTuscC2ojyhAlLQTtF92klO_TouvBPal-Au73MONRfvsxQJcx22fzkkPef_moT8qTUXXIIZGWAYURl7SxXT6WOil8gZ-PBpHFNzPcQpPACZaaQ3goILXNUscOG88W9MWceLL3sivbxigszubMVitRuP7ksWDTj78-TYrPPRGznY9AIJn8CRQcoIO894s7jvkglcVisU2FqgcNaWEvXqchaoUbTrvuDA5LpPubcViGt2yh1vLB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 text-white">
+<span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps mb-6 rounded-full">التميز في البناء</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">سنمارك … <span class="text-secondary-container">حين تلتقي القوة بالابتكار</span></h1>
+<p class="font-body-main text-body-main text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                        نحن لا نبني مجرد هياكل، بل نصنع معالم تدوم. في سنمارك للمقاولات، نجمع بين عراقة الهندسة وأحدث تقنيات البناء الحديثة لتقديم مشاريع تتجاوز التوقعات وتجسد "بصمة التميز" في كل ركن.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-body-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 shadow-xl shadow-secondary-container/20">
+                            Book Free Consultation
+                            <span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</button>
+<button class="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-lg font-body-bold text-lg hover:bg-white/10 transition-colors">
+                            Request Quote
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="relative p-4">
+<div class="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-secondary-container opacity-50"></div>
+<img alt="Building Detail" class="rounded-xl shadow-2xl" data-alt="Extreme close-up of high-end architectural facade with glass and steel, sharp angles, reflecting the blue sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCoHCrfmFlq4juBDqGDpKp9wMV2rfWH8t-GLMeRGzRYlAdyk4rtBtB1MuGi6E2FV717gQ2UCiRuHsDv_FOrzLsPxctOCDpgWRC6PMhLoCmKAczGYKO3HcL863pMYu25OOxvrcWkqwGV6ipNfzl7uvkE6d_Ms5KTDG0vfCFFiJyDi3a7-A0WXFXMFipDlYAXtkFgk0eLyR8D5IkFwLjgQx7go9g1Bvz8mz-hjqzdJNUrrUOrPCEUVO7x3xZ0JBiXqpLI8WBsGlnGVt0"/>
+<div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-4 border-l-4 border-secondary-container opacity-50"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Bar -->
+<section class="bg-white py-12 border-b border-slate-100">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-slate-100">
+<div class="py-4 md:py-0">
+<div class="font-display-lg text-secondary-container mb-1">+150</div>
+<div class="font-body-bold text-slate-600">projects</div>
+</div>
+<div class="py-4 md:py-0">
+<div class="font-display-lg text-primary mb-1">+10</div>
+<div class="font-body-bold text-slate-600">years leadership</div>
+</div>
+<div class="py-4 md:py-0">
+<div class="font-display-lg text-secondary-container mb-1">98%</div>
+<div class="font-body-bold text-slate-600">satisfaction</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Distinction Section -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-8">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">بصمة التميز من سنمارك</h2>
+<div class="w-20 h-1 bg-secondary-container mx-auto mb-6"></div>
+<p class="font-body-main text-slate-600 text-lg">نحن نؤمن بأن كل مشروع هو فرصة لابتكار حلول هندسية توازن بين القوة الإنشائية والجمال المعماري.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Daring Precision -->
+<div class="mark-distinction-card bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container group-hover:text-white text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-4">Daring Precision</h3>
+<p class="font-caption text-slate-500 leading-relaxed">دقة متناهية في التنفيذ تتحدى أصعب التصاميم الهندسية، حيث نحول الخطوط الجريئة إلى واقع ملموس وصلب.</p>
+</div>
+<!-- Limitless Quality -->
+<div class="mark-distinction-card bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container group-hover:text-white text-3xl" data-icon="verified">verified</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-4">Limitless Quality</h3>
+<p class="font-caption text-slate-500 leading-relaxed">جودة بلا حدود تلتزم بأعلى المعايير العالمية في اختيار المواد وتقنيات البناء لضمان استدامة المشاريع.</p>
+</div>
+<!-- Total Transparency -->
+<div class="mark-distinction-card bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container group-hover:text-white text-3xl" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-4">Total Transparency</h3>
+<p class="font-caption text-slate-500 leading-relaxed">شفافية مطلقة في كل مراحل العمل، من التقديرات المالية حتى تسليم المفتاح، لبناء شراكة قائمة على الثقة.</p>
+</div>
+<!-- Modern Imprint -->
+<div class="mark-distinction-card bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container group-hover:text-white text-3xl" data-icon="fingerprint">fingerprint</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary mb-4">Modern Imprint</h3>
+<p class="font-caption text-slate-500 leading-relaxed">بصمة عصرية تدمج التكنولوجيا الذكية في البناء لإنشاء مساحات ذكية تتوافق مع متطلبات المستقبل.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-primary-container relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[30rem] leading-none" data-icon="architecture">architecture</span>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="bg-white p-12 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+<div class="max-w-2xl text-center md:text-right">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">هل أنت جاهز للبدء في مشروعك القادم؟</h2>
+<p class="font-body-main text-slate-600">فريقنا من المهندسين والخبراء مستعد لتحويل رؤيتك إلى واقع إنشائي متميز. اتصل بنا اليوم للحصول على استشارة فنية متخصصة.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-body-bold text-center hover:bg-slate-800 transition-colors">Request Quote</button>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-body-bold text-center hover:opacity-90 transition-opacity">Book Free Consultation</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-black text-orange-500 dark:text-orange-400 font-['Manrope'] text-sm text-slate-400 w-full border-t-2 border-orange-500 border-t border-slate-800 w-full py-12 px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-white mb-4">SANAMARK</div>
+<p class="text-slate-400 mb-6 leading-relaxed">الشركة الرائدة في مجال المقاولات والإنشاءات الهندسية بمعايير عالمية وبصمة ابتكارية لا تضاهى.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</a>
+<a class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">روابط سريعة</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Services</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Portfolio</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">قانوني</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Safety Standards</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">تواصل معنا</h4>
+<p class="text-slate-400 mb-4 flex items-start gap-2">
+<span class="material-symbols-outlined text-orange-500" data-icon="location_on">location_on</span>
+                الرياض، المملكة العربية السعودية - حي النخيل
+            </p>
+<p class="text-slate-400 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500" data-icon="call">call</span>
+                +966 500 000 000
+            </p>
+<p class="text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500" data-icon="mail">mail</span>
+                info@sanamark.com
+            </p>
+</div>
+<div class="md:col-span-4 border-t border-slate-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Sanamark Construction. The Mark of Distinction.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white" href="#">Facebook</a>
+<a class="text-slate-400 hover:text-white" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-white" href="#">Instagram</a>
+<a class="text-slate-400 hover:text-white" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
